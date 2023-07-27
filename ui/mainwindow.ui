@@ -577,7 +577,7 @@
   </widget>
   <action name="menu_exit">
    <property name="text">
-    <string>Exit</string>
+    <string>Leave</string>
    </property>
   </action>
   <action name="actionShow_window">
