@@ -1226,10 +1226,6 @@ This needs to be run NekoBox with administrator privileges.</source>
         <translation>گروه فعلی</translation>
     </message>
     <message>
-        <source>Exit</source>
-        <translation>خروج</translation>
-    </message>
-    <message>
         <source>Basic Settings</source>
         <translation>تنظیمات پایه</translation>
     </message>
@@ -1570,6 +1566,10 @@ End: %2</source>
     </message>
     <message>
         <source>Stop Testing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Leave</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
