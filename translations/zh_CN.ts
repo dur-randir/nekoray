@@ -1119,10 +1119,6 @@ This needs to be run NekoBox with administrator privileges.</source>
         <translation>分享</translation>
     </message>
     <message>
-        <source>Exit</source>
-        <translation>退出</translation>
-    </message>
-    <message>
         <source>Basic Settings</source>
         <translation>基本设置</translation>
     </message>
@@ -1497,6 +1493,10 @@ Split by line.</source>
     <message>
         <source>Stop Testing</source>
         <translation>停止测试</translation>
+    </message>
+    <message>
+        <source>Leave</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

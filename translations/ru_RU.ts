@@ -1166,10 +1166,6 @@ https://matsuridayo.github.io/n-configuration/#vpn-tun</translation>
         <translation>Текущий выбор</translation>
     </message>
     <message>
-        <source>Exit</source>
-        <translation>Выход</translation>
-    </message>
-    <message>
         <source>Show Window</source>
         <translation>Показать окно</translation>
     </message>
@@ -1496,6 +1492,10 @@ End: %2</source>
     </message>
     <message>
         <source>Stop Testing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Leave</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
