@@ -30,7 +30,9 @@ if (NKR_CROSS)
 endif ()
 
 #### Platform Variables ####
-if (WIN32)
+if (APPLE)
+    include("cmake/macos/macos.cmake")
+elseif (WIN32)
     include("cmake/windows/windows.cmake")
 else ()
     include("cmake/linux/linux.cmake")
@@ -62,6 +64,10 @@ include("cmake/print.cmake")
 include("cmake/nkr.cmake")
 
 find_package(Threads)
+
+if (NKR_PACKAGE OR NKR_PACKAGE_MACOS)
+    nkr_add_compile_definitions(NKR_CPP_USE_APPDATA)
+endif ()
 
 #### NKR EXTERNAL ####
 
@@ -265,7 +271,18 @@ set_property(TARGET nekobox PROPERTY AUTOUIC ON)
 set_property(TARGET nekobox PROPERTY AUTOMOC ON)
 set_property(TARGET nekobox PROPERTY AUTORCC ON)
 
+# Target Source macOS
+
+set(MACOSX_ICON ${CMAKE_SOURCE_DIR}/res/nekoray.icns)
+if (APPLE)
+    target_sources(nekobox PRIVATE ${MACOSX_ICON})
+endif ()
 set_target_properties(nekobox PROPERTIES
+        MACOSX_BUNDLE_ICON_FILE "nekoray.icns"
+        RESOURCE ${MACOSX_ICON}
+        MACOSX_BUNDLE_INFO_PLIST ${CMAKE_SOURCE_DIR}/res/MacOSXBundleInfo.plist
+        MACOSX_BUNDLE_GUI_IDENTIFIER moe.nekobox.macosx
+        MACOSX_BUNDLE TRUE
         WIN32_EXECUTABLE TRUE
 )
 
