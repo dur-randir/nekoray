@@ -293,11 +293,11 @@ set(MACOSX_ICON ${CMAKE_SOURCE_DIR}/res/nekoray.icns)
 if (APPLE)
     target_sources(nekoray PRIVATE ${MACOSX_ICON})
 endif ()
-set_target_properties(nekoray PROPERTIES
+set_target_properties(nekobox PROPERTIES
         MACOSX_BUNDLE_ICON_FILE "nekoray.icns"
         RESOURCE ${MACOSX_ICON}
         MACOSX_BUNDLE_INFO_PLIST ${CMAKE_SOURCE_DIR}/res/MacOSXBundleInfo.plist
-        MACOSX_BUNDLE_GUI_IDENTIFIER moe.nekoray.macosx
+        MACOSX_BUNDLE_GUI_IDENTIFIER moe.nekobox.macosx
         MACOSX_BUNDLE TRUE
         WIN32_EXECUTABLE TRUE
 )
