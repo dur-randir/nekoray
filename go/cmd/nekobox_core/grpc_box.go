@@ -50,6 +50,7 @@ func (s *server) Start(ctx context.Context, in *gen.LoadConfigReq) (out *gen.Err
 	if instance != nil {
 		// Logger
 		instance.SetLogWritter(neko_log.LogWriter)
+        neko_log.LogWriterDisable = true
 		// V2ray Service
 		if in.StatsOutbounds != nil {
 			instance.Router().SetV2RayServer(boxapi.NewSbV2rayServer(option.V2RayStatsServiceOptions{
